@@ -33,6 +33,7 @@ const modulename = "junos.so.19.3.1.8"
 
 var modelData = []*gnmi.ModelData{
     {Name:"junos-conf-interfaces",Organization:"Juniper",Version:"2019-01-01"},
+    {Name:"junos-conf-system",Organization:"Juniper",Version:"2019-01-01"},
 }
 
 func (m modelplugin) ModelData() (string, string, []*gnmi.ModelData, string) {

@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses poe-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses poe-group;
-   }
    grouping poe-group {
      container poe {
        description "Power over Ethernet options";

@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses bridge-domains-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses bridge-domains-group;
-   }
    grouping bridge-domains-group {
      container bridge-domains {
        description "Bridge domain configuration";

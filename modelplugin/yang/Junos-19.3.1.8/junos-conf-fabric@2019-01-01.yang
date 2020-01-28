@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses fabric-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses fabric-group;
-   }
    grouping fabric-group {
      container fabric {
        description "Fabric configuration";

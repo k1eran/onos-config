@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses chassis-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses chassis-group;
-   }
    grouping chassis-group {
      container chassis {
        description "Chassis configuration";

@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses policy-options-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses policy-options-group;
-   }
    grouping policy-options-group {
      container policy-options {
        description "Policy option configuration";

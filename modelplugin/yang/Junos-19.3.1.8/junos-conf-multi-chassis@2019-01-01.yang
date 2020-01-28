@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses multi-chassis-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses multi-chassis-group;
-   }
    grouping multi-chassis-group {
      container multi-chassis {
        presence "enable multi-chassis";

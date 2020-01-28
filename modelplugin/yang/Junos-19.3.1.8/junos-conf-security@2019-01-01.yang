@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses security-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses security-group;
-   }
    grouping security-group {
      container security {
        description "Security configuration";

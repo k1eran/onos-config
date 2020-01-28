@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses switch-options-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses switch-options-group;
-   }
    grouping switch-options-group {
      container switch-options {
        description "Options for default routing-instance of type virtual-switch";

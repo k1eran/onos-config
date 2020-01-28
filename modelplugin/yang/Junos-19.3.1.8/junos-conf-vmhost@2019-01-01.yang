@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses vmhost-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses vmhost-group;
-   }
    grouping vmhost-group {
      container vmhost {
        description "VM Host configurations";

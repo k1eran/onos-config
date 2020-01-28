@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses firewall-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses firewall-group;
-   }
    grouping firewall-group {
      container firewall {
        description "Define a firewall configuration";

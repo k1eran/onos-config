@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses dynamic-profiles-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses dynamic-profiles-group;
-   }
    grouping dynamic-profiles-group {
      list dynamic-profiles {
        key name;

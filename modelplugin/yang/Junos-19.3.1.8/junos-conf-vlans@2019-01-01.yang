@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses vlans-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses vlans-group;
-   }
    grouping vlans-group {
      container vlans {
        junos:must "(!(\"bridge-domains\"))";

@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses applications-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses applications-group;
-   }
    grouping applications-group {
      container applications {
        description "Define applications by protocol characteristics";

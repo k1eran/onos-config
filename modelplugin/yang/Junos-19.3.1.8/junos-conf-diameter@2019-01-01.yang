@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses diameter-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses diameter-group;
-   }
    grouping diameter-group {
      container diameter {
        presence "enable diameter";

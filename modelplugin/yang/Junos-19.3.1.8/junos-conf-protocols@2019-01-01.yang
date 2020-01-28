@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses protocols-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses protocols-group;
-   }
    grouping protocols-group {
      container protocols {
        description "Routing protocol configuration";

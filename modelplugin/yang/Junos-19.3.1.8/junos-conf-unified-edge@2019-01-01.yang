@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses unified-edge-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses unified-edge-group;
-   }
    grouping unified-edge-group {
      container unified-edge {
        description "Unified edge configuration";

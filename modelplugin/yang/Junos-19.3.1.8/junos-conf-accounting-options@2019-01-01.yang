@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses accounting-options-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses accounting-options-group;
-   }
    grouping accounting-options-group {
      container accounting-options {
        description "Accounting data configuration";

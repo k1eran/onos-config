@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses services-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses services-group;
-   }
    grouping services-group {
      container services {
        description "Services configuration";

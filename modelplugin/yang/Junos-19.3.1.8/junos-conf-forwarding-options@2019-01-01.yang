@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses forwarding-options-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses forwarding-options-group;
-   }
    grouping forwarding-options-group {
      container forwarding-options {
        description "Configure options to control packet forwarding";

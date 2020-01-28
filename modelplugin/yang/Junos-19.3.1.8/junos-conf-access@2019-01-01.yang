@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses access-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses access-group;
-   }
    grouping access-group {
      container access {
        description "Network access configuration";

@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses system-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses system-group;
-   }
    grouping system-group {
      container system {
        description "System parameters";

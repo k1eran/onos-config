@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses access-profile-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses access-profile-group;
-   }
    grouping access-profile-group {
      container access-profile {
        description "Access profile for this instance";

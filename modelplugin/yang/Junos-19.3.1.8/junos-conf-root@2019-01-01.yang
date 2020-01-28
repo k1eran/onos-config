@@ -24,16 +24,20 @@
    revision 2019-01-01 {
      description "Junos: 19.3R1.8";
    }
-
    container configuration {
      config true;
      uses juniper-config;
-     list groups {
-       key name;
-       ordered-by user;
-       description "Configuration groups";
-       uses juniper-group;
-     }
+//
+// Removed configuration-groups to reduce model size during proof-of-concept
+// 4/Feb/2020
+//
+//     list groups {
+//       key name;
+//       ordered-by user;
+//       description "Configuration groups";
+//       uses juniper-group;
+//     }
+//
    }
    grouping juniper-config {
      leaf rcsid {

@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses event-options-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses event-options-group;
-   }
    grouping event-options-group {
      container event-options {
        description "Event processing configuration";

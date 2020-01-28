@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses snmp-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses snmp-group;
-   }
    grouping snmp-group {
      container snmp {
        description "Simple Network Management Protocol configuration";

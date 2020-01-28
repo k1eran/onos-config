@@ -32,9 +32,6 @@
    augment /jc:configuration {
      uses virtual-chassis-group;
    }
-   augment /jc:configuration/jc:groups {
-     uses virtual-chassis-group;
-   }
    grouping virtual-chassis-group {
      container virtual-chassis {
        junos:must "(!(\"forwarding-options hyper-mode\"))";
