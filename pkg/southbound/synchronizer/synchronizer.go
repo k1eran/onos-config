@@ -151,7 +151,7 @@ func (sync Synchronizer) initialSet(context context.Context, onosExistingConfig 
 func (sync Synchronizer) syncOperationalStateByPartition(ctx context.Context, target southbound.TargetIf,
 	errChan chan<- events.DeviceResponse) {
 
-	log.Infof("Syncing Op & State of %s started. Mode %v", string(sync.key), sync.getStateMode)
+	log.Infof("Syncing Op & State by partition of %s started. Mode %v", string(sync.key), sync.getStateMode)
 	notifications := make([]*gnmi.Notification, 0)
 	stateNotif, errState := sync.getOpStatePathsByType(ctx, target, gnmi.GetRequest_STATE, errChan)
 	if errState != nil {
@@ -188,7 +188,7 @@ func (sync Synchronizer) syncOperationalStateByPartition(ctx context.Context, ta
 func (sync Synchronizer) syncOperationalStateByPaths(ctx context.Context, target southbound.TargetIf,
 	errChan chan<- events.DeviceResponse) {
 
-	log.Infof("Syncing Op & State of %s started. Mode %v", string(sync.key), sync.getStateMode)
+	log.Infof("Syncing Op & State of %s by paths started. Mode %v", string(sync.key), sync.getStateMode)
 	if sync.modelReadOnlyPaths == nil {
 		errMp := fmt.Errorf("no model plugin, cant work in operational state cache")
 		log.Error(errMp)
@@ -428,6 +428,11 @@ func (sync *Synchronizer) subscribeOpState(target southbound.TargetIf, errChan c
 		HeartbeatInterval: 15,
 		Paths:             subscribePaths,
 		Origin:            "",
+	}
+
+	if (len(subscribePaths)) == 0 {
+		log.Warnf("No paths for %s so don't try to subscribe", string(sync.key))
+		return
 	}
 
 	log.Infof("Subscribing to %d paths. %s", len(subscribePaths), string(sync.key))
